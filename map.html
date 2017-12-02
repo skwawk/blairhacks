@@ -36,9 +36,8 @@
         maryland = new google.maps.Map(document.getElementById("map"), {
           zoom: 6,
           center: {lat: 39.05, lng: -76.64}
+          onclick = "placeMarker(maryland.latlng)"
         });
-        console.log(maryland);
-        maryland.addListener('click', placeMarker(maryland.latlng));
         return maryland;
       }
       var marker;
