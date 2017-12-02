@@ -28,19 +28,21 @@
  <h3>Map of Maryland</h3>
     <div id="map"></div>
     <script>
+     var maryland;
+     var marker;
       function MDmap() {
-        var maryland = new google.maps.Map(document.getElementById("map"), {
-          zoom: 2,
+        maryland = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10,
           center: {lat: 39.05, lng: -76.64}
         });
       }
-     var maryland = new google.maps.event.addListener(maryland, 'click', placemarker(event.latlng))
-     function placeMarker(location) {
+     maryland = new google.maps.event.addListener(maryland, 'click', placemarker(event.latlng))
+    function placeMarker(location) {
       var marker = google.maps.Marker({
         position: location, 
         map: maryland
       });
-     }
+    }
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz6byW7DAcBxTH5DxVJf4Ie-O8H_gaQzY&callback=MDmap">
