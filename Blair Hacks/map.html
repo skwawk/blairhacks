@@ -27,15 +27,18 @@
 <h2>Welcome to Take Initiative!</h2>
  <h3>Map of Maryland</h3>
     <div id="map"></div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz6byW7DAcBxTH5DxVJf4Ie-O8H_gaQzY&callback=MDmap">
+    </script>
     <script>
-     
-      var maryland = new google.maps.Map(document.getElementById("map"), {
+      function MDmap() {
+        var maryland = new google.maps.Map(document.getElementById("map"), {
           zoom: 6,
           center: {lat: 39.05, lng: -76.64}
         });
-      function MDmap() {
         var maryland = maryland.event.addListener(map, 'click', placeMarker(event.latlng))
         return maryland
+      }
      
        function placeMarker(location) {
           var marker = google.maps.Marker({
@@ -47,9 +50,7 @@
       }
      
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz6byW7DAcBxTH5DxVJf4Ie-O8H_gaQzY&callback=MDmap">
-    </script>
+   
 </div>
  
 </body>
