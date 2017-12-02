@@ -25,7 +25,7 @@
   listDiv = getElementById("listDiv");
   refList.onload = function() {
     if (refList.status === 200) {
-        getElementById("listDiv").innerHTML = refList.responseText;
+        document.getElementById("listDiv").innerHTML = refList.responseText;
     }
   }
     
