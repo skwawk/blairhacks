@@ -32,15 +32,15 @@
      var marker;
       function MDmap() {
         maryland = new google.maps.Map(document.getElementById("map"), {
-          zoom: 10,
+          zoom: 8,
           center: {lat: 39.05, lng: -76.64}
         });
       }
-     maryland = new google.maps.event.addListener(maryland, 'click', placemarker(event.latlng))
+     maryland.addListener('click', placemarker(event.latlng))
     function placeMarker(location) {
-      var marker = google.maps.Marker({
-        position: location, 
-        map: maryland
+      marker = google.maps.Marker({
+       position: location, 
+       map: maryland
       });
     }
     </script>
