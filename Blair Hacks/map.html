@@ -34,15 +34,16 @@
           zoom: 6,
           center: {lat: 39.05, lng: -76.64}
         });
-        function placeMarker(location, map) {
-        var marker = google.maps.Marker({
-          position: location, 
-          map: maryland
-        });
-       }
+      
         var maryland = maryland.event.addListener(map, 'click', placeMarker(event.latlng, maryland))
       }
- 
+     
+      function placeMarker(location, map) {
+           var marker = google.maps.Marker({
+             position: location, 
+             map: map
+           });
+          }
      
     </script>
     <script async defer
