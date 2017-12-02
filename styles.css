@@ -30,3 +30,7 @@ p {
 	background-color: white;
 	padding: 20px;
 }
+
+.bumper {
+	height: 50px;
+}
