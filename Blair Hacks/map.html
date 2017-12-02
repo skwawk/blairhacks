@@ -34,7 +34,7 @@
           center: {lat: 39.05, lng: -76.64}
         });
       }
-     var maryland = maryland.event.addListener(maryland, 'click', placeMarker(event.latlng))
+     var maryland = maryland.event.addListener(map, 'click', placeMarker(event.latlng))
 
      function placeMarker(location) {
       var marker = google.maps.Marker({
