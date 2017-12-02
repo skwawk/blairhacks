@@ -29,7 +29,8 @@
   refList.open('GET', 'refList.html', true);
   refList.send(null);
      
-  document.getElementById("sub").addEventListener("click", newRef);
+  subButton = document.getElementById("sub")
+  subButton.addEventListener("click", newRef);
   
   function newRef() {
     var name = document.getElementById("refName").value;
