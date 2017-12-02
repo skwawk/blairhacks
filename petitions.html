@@ -22,7 +22,7 @@
 <script>
   var refList = new XMLHttpRequest();
    
-  listDiv = getElementById("listDiv");
+
   refList.onload = function() {
     if (refList.status === 200) {
         document.getElementById("listDiv").innerHTML = refList.responseText;
