@@ -1,27 +1,4 @@
-<!doctype html>
-<html>
 
-<head>
-<title>Take Initiative Referendums</title>
-<link href="styles.css" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
-
-</head>
-
-<body>
-<div id="header">
-<h1>Take Initiative</h1>
-<a class="menuLink" href="index.html">Home</a> &nbsp; &nbsp; &nbsp; &nbsp;
-<a class="menuLink" href="about.html">Learn</a> &nbsp; &nbsp; &nbsp; &nbsp;
-<a class="menuLink" href="signatures.html">Signatures</a> &nbsp; &nbsp; &nbsp; &nbsp;
-<a class="menuLink" href="petitions.html">Referendums</a> &nbsp; &nbsp; &nbsp; &nbsp;
-<a class="menuLink" href="map.html">Canvassing</a> &nbsp; &nbsp; &nbsp; &nbsp;
-
-</div>
-
-
-
-<div id="page">
 <h2>List of Referendums</h2>
   <div id="listDiv">
   </div>
@@ -32,7 +9,7 @@ Referendum name: <input type="text" id="refName" />
 Referendum description: <input type="text" id="refDescription" height=24px />
   <input type="button" value="Submit" id="sub" />
 
-</div>
+
 <script>
   var refList = new XMLHttpRequest();
   refList.onload = function() {
@@ -55,6 +32,4 @@ Referendum description: <input type="text" id="refDescription" height=24px />
   }
   
 </script>
-</body>
 
-</html>
