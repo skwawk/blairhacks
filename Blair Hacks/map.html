@@ -34,12 +34,22 @@
           center: {lat: 39.05, lng: 76.64}
         });
       }
+     google.maps.event.addListener(map, 'click', function(event) {
+      placeMarker(event.latLng);
+     });
+
+     function placeMarker(location) {
+      var marker = new google.maps.Marker({
+        position: location, 
+        map: map
+      });
+     }
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz6byW7DAcBxTH5DxVJf4Ie-O8H_gaQzY&callback=MDmap">
     </script>
 </div>
-
+ 
 </body>
 
 </html>
