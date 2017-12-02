@@ -11,7 +11,7 @@
 <body>
 <div id="header">
 <h1>Take Initiative</h1>
-<a class="menuLink" href="#">Home</a> &nbsp; &nbsp; &nbsp; &nbsp;
+<a class="menuLink" href="index.html">Home</a> &nbsp; &nbsp; &nbsp; &nbsp;
 <a class="menuLink" href="about.html">Learn</a> &nbsp; &nbsp; &nbsp; &nbsp;
 <a class="menuLink" href="signatures.html">Signatures</a> &nbsp; &nbsp; &nbsp; &nbsp;
 <a class="menuLink" href="petitions.html">Referendums</a> &nbsp; &nbsp; &nbsp; &nbsp;
@@ -26,6 +26,7 @@
   refList.onload = function() {
     if (refList.status === 200) {
         getElementById("listDiv").innerHTML = refList.responseText;
+    }
   }
     
   refList.open('GET', 'data/refList.html', true);
@@ -34,17 +35,14 @@
   function newRef() {
     var name = document.getElementById("refName").value;
     var description = document.getElementById("refDescription").value;
-    va
   }
-  
-  
   
 </script>
 
 <div id="page">
 <h2>List of Referendums</h2>
-  <div id="listDiv"
-  {{referendumList}}
+  <div id="listDiv">
+  </div>
   
   
   <h2>Add a Referendum</h2>
@@ -53,12 +51,6 @@ Referendum description: <input type="text" id="refDescription" height=24px />
   <input type="button" value="Submit" onClick="newRef()" />
 <a href = "map.html"><button></button></a>
   
-<p>In Maryland, citizens can influence their government through <em>referendums</em> and <em>recalls</em>. This website is designed to help citizens make referendums, learn about the requirements, find potential signatures, co-ordinate their canvasing, and more. You can also learn about other initiatives and volunteer as a potential signature.</p>
-<a href="about.html">Learn more about Maryland ballot initiatives</a>
-<a href="signatures.html">Learn how to collect signatures for your petitions</a>
-<a href="petitions.html">Add your petition to our list</a>
-<a href="map">Point out which initiatives you're interested in</a>
-<p>
 </div>
 
 </body>
