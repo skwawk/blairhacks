@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Take Initiative Home</title>
+<title>Take Initiative Referendums</title>
 <link href="styles.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
 
@@ -20,9 +20,21 @@
 </div>
 
 <script>
-  function newInitiative() {
-    var text = document.getElementById("textbox");
+  var refList = new SMLHttpRequest();
+   
+  listDiv = getElementById("listDiv");
+  refList.onload = function() {
+    if (refList.status === 200) {
+        getElementById("listDiv").innerHTML = refList.responseText;
+  }
     
+  refList.open('GET', 'data/refList.html', true);
+  refList.send(null);
+     
+  function newRef() {
+    var name = document.getElementById("refName").value;
+    var description = document.getElementById("refDescription").value;
+    va
   }
   
   
@@ -30,10 +42,15 @@
 </script>
 
 <div id="page">
-<h2>Welcome to Take Initiative!</h2>
+<h2>List of Referendums</h2>
+  <div id="listDiv"
+  {{referendumList}}
   
   
-<input type = "text" id = "textbox">
+  <h2>Add a Referendum</h2>
+Referendum name: <input type="text" id="refName" />
+Referendum description: <input type="text" id="refDescription" height=24px />
+  <input type="button" value="Submit" onClick="newRef()" />
 <a href = "map.html"><button></button></a>
   
 <p>In Maryland, citizens can influence their government through <em>referendums</em> and <em>recalls</em>. This website is designed to help citizens make referendums, learn about the requirements, find potential signatures, co-ordinate their canvasing, and more. You can also learn about other initiatives and volunteer as a potential signature.</p>
