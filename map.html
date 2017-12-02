@@ -27,26 +27,31 @@
 <h2>Welcome to Take Initiative!</h2>
  <h3>Map of Maryland</h3>
     <div id="map"></div>
-    <script>
-     var maryland;
-     var marker;
-      function MDmap() {
-        maryland = new google.maps.Map(document.getElementById("map"), {
-          zoom: 8,
-          center: {lat: 39.05, lng: -76.64}
-        });
-      }
-     maryland.addListener('click', placemarker(event.latlng))
-    function placeMarker(location) {
-      marker = google.maps.Marker({
-       position: location, 
-       map: maryland
-      });
-    }
-    </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz6byW7DAcBxTH5DxVJf4Ie-O8H_gaQzY&callback=MDmap">
     </script>
+    <script>
+     var maryland;
+      function MDmap() {
+        maryland = new google.maps.Map(document.getElementById("map"), {
+          zoom: 6,
+          center: {lat: 39.05, lng: -76.64}
+        });
+        console.log(maryland);
+        maryland.addListener('click', placeMarker(maryland.latlng));
+        return maryland;
+      }
+      var marker;
+       function placeMarker(location) {
+          marker = new google.maps.Marker({
+            position: location, 
+            map: maryland
+          });
+          return marker;
+       }
+     
+    </script>
+   
 </div>
  
 </body>
