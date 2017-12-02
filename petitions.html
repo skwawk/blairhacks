@@ -19,6 +19,20 @@
 
 </div>
 
+
+
+<div id="page">
+<h2>List of Referendums</h2>
+  <div id="listDiv">
+  </div>
+  
+  
+  <h2>Add a Referendum</h2>
+Referendum name: <input type="text" id="refName" />
+Referendum description: <input type="text" id="refDescription" height=24px />
+  <input type="button" value="Submit" id="sub" />
+
+</div>
 <script>
   var refList = new XMLHttpRequest();
   refList.onload = function() {
@@ -41,21 +55,6 @@
   }
   
 </script>
-
-<div id="page">
-<h2>List of Referendums</h2>
-  <div id="listDiv">
-  </div>
-  
-  
-  <h2>Add a Referendum</h2>
-Referendum name: <input type="text" id="refName" />
-Referendum description: <input type="text" id="refDescription" height=24px />
-  <input type="button" value="Submit" id="sub" />
-
-  
-</div>
-
 </body>
 
 </html>
