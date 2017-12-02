@@ -35,6 +35,8 @@
   function newRef() {
     var name = document.getElementById("refName").value;
     var description = document.getElementById("refDescription").value;
+    var htmlToSend = name.str() + ": " + description.str();
+     $.post('refList.html', {html: htmlToSend});
   }
   
 </script>
@@ -49,7 +51,7 @@
 Referendum name: <input type="text" id="refName" />
 Referendum description: <input type="text" id="refDescription" height=24px />
   <input type="button" value="Submit" onClick="newRef()" />
-<a href = "map.html"><button></button></a>
+
   
 </div>
 
