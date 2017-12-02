@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Take Initiative Home</title>
+<link href="styles.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+<style>
+ #map {
+  height: 400px;
+  width: 100%;
+ }
+</style>
+</head>
+
+<body>
+<div id="header">
+<h1>Take Initiative</h1>
+<a class="menuLink" href="#">Home</a> &nbsp; &nbsp; &nbsp; &nbsp;
+<a class="menuLink" href="#">About</a> &nbsp; &nbsp; &nbsp; &nbsp;
+<a class="menuLink" href="#">Signatures</a>
+</list>
+</div>
+
+
+<div id="page">
+<h2>Welcome to Take Initiative!</h2>
+ <h3>Map of Maryland</h3>
+    <div id="map"></div>
+    <script>
+      function MDmap() {
+        var maryland = new google.maps.Map(document.getElementById("map"), {
+          zoom: 6,
+          center: {lat: 39.05, lng: -76.64}
+        });
+      }
+     var maryland = new google.maps.event.addListener(maryland, 'click', placemarker(event.latlng))
+     function placeMarker(location) {
+      var marker = google.maps.Marker({
+        position: location, 
+        map: maryland
+      });
+     }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz6byW7DAcBxTH5DxVJf4Ie-O8H_gaQzY&callback=MDmap">
+    </script>
+</div>
+ 
+</body>
+
+</html>
