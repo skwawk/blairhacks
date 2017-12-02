@@ -21,17 +21,16 @@
 
 <script>
   var refList = new XMLHttpRequest();
-   
-
   refList.onload = function() {
     if (refList.status === 200) {
         document.getElementById("listDiv").innerHTML = refList.responseText;
     }
-  }
-    
+  }  
   refList.open('GET', 'refList.html', true);
   refList.send(null);
      
+  document.getElementById("sub").addEventListener("click", newRef)
+  
   function newRef() {
     var name = document.getElementById("refName").value;
     var description = document.getElementById("refDescription").value;
@@ -50,7 +49,7 @@
   <h2>Add a Referendum</h2>
 Referendum name: <input type="text" id="refName" />
 Referendum description: <input type="text" id="refDescription" height=24px />
-  <input type="button" value="Submit" onClick="newRef()" />
+  <input type="button" value="Submit" id="sub" />
 
   
 </div>
