@@ -1,4 +1,3 @@
-yo 
-yo
-yo
-read me
+This is a website designed to help people learn about referendums in Maryland and create their own. It contains information on what referendums are and how to gather signatures for them. It also allows for users to view a list of referendums and add their own, as well as add labels to an interactive map of Maryland.
+If given more time, we would be able to save user input referendums and the locations they add to the Maryland map.
+There are two versions of our website, the static version and the Django version. The static version is more polished and can read data from the server, but does not allow for saving data to the server. The Django version is styleless, but can be expanded in the future to include more server-side features.
