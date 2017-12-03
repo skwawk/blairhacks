@@ -50,7 +50,7 @@ Referendum description: <input type="text" id="refDescription" height=24px />
   function newRef() {
     var name = document.getElementById("refName").value;
     var description = document.getElementById("refDescription").value;
-    var htmlToSend = name.toString() + ": " + description.toString();
+    var htmlToSend = "<br />" + name.toString() + ": " + description.toString();
      document.getElementById("listDiv").innerHTML = document.getElementById("listDiv").innerHTML + htmlToSend;
   }
   
