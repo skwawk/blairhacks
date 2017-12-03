@@ -1,4 +1,4 @@
-#!/root/takeinitiative/takeinitenv/bin/python
+#!/root/blairhacks/takeinitiative/takeinitenv/bin/python
 
 import sys
 import getopt
